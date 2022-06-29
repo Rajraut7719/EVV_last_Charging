@@ -1,0 +1,34 @@
+{% extends 'base.html' %}
+{% include header1.html %}
+{% load static %}
+{% block content %}  
+<div class="container-fluid">
+    <hr class='mt-4  border1'>
+    <div class="row">
+      <div class="col-md-7">
+      </div>
+        <div class="col-sm-4 mx-5 " style='border-style:groove;border-radius: 25px;margin-left-300px'>
+           <div class='p-3'>
+            {% if form.non_field_errors %}
+                      {% for error in form.non_field_errors %}
+                     <p class='er'> {{error}}</p>
+                      {% endfor %}
+                    {% endif %}
+                  <form class=''method='POST'novalidate>
+                    {% csrf_token %}
+                        {% for fm in form %}
+                        <div class="mb-3">
+                          {{fm.label_tag}}{{fm}}{{fm.errors|striptags}}
+                        </div>
+                        {% endfor %}
+                        <input type="submit"value='Save'class='btn btn-success'>
+                  </form>
+                  {% comment %} <a href="{% url 'profile' %}"class='btn btn-primary mt-4'>Profile</a>
+                  <a href="{% url 'logout' %}"class='btn btn-secondary mt-4'>Logout</a> {% endcomment %}
+           </div>
+        </div>
+    </div>
+    <hr class='mt-4 border1'>
+</div>
+  
+{% endblock content %}

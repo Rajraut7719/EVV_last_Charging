@@ -1,0 +1,15 @@
+{% load static %}
+<nav class="navbar navbar-light  bg-success">
+    <div class="container-fluid">
+     <a href="/"> <img src="{% static 'images/Yahhvi_logo-removebg.png' %} " alt=""class='img'></a>
+      <div class="d-flex  ">
+        <li class="nav-item">
+            {% comment %} <a class="nav-link" href="{% url 'register' %}">Register</a> {% endcomment %}
+          </li>
+          <li class="nav-item text-white">
+            <a class="nav-link" href="{% url 'login' %}" >Logout</a>
+          </li>
+      </div>
+    </div>
+  </nav>
+  <div>

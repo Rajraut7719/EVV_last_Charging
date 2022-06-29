@@ -1,0 +1,1 @@
+web: gunicorn EV_Chargeing.wsgi

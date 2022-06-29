@@ -1,0 +1,46 @@
+/*Header image*/
+body{
+    font-family: 'Poppins', sans-serif;
+}
+.img{
+    height: 100px;
+    width: 200px;
+
+}
+/*Home image*/
+.img1{
+    height: 300px;
+    width: 600px;
+    margin-left: 300px;
+    
+  
+}
+.img1 a{
+    opacity:0.1;
+}
+/*Register image*/
+.img2{
+    height: 300px;
+    width: 600px;
+    margin-left: 30px;
+}
+.nav-item{
+    list-style-type:none; 
+}
+.nav-item a{
+    color: white;
+}
+
+.footer1{
+    background-color: #00D100;
+    height: 100px;
+}
+.border1{
+    /* border-style: dotted; */
+    border-style:dotted;
+    border-width: thin;
+    border-color: green;
+}
+h5{
+    margin-left: 170px;
+}

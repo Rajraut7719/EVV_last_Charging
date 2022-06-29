@@ -1,0 +1,43 @@
+{% extends 'base.html' %}
+{% include header1.html %}
+{% load static %}
+{% block content %}  
+<div class="container-fluid">
+    <hr class='mt-4  border1'>
+    <div class="row">
+     <div class='col-md-5'style='margin-left:400px'>
+     </div>
+        <div class="col-sm-6" style='border-style:groove;border-radius: 25px;margin-left:380px'>
+           <div class='p-3'>
+                  <div class='row'>
+                    <div class="col-md-6 mt-5">
+                      <h4 class=' mt-4'>Charging Management</h4>
+                     <a href=""> <i class="fa-solid fa-circle-notch fa-5x" style='margin-top:60px;margin-left:110px'></i></a>
+                      <h5 class=''style='margin-left:80px;margin-top:10px'>Start Charging</h5>
+                    </div>
+                    <div class="col-md-6">
+                     <div>
+                      <i class="fa-solid fa-plug  fa-5x"style='margin-top:60px;margin-left:90px'></i><br> 
+                      <p style='margin-left:90px'>Plugged</p>
+                     </div>
+                     <div class=''>
+                      <i class="fa-solid fa-charging-station fa-5x"style='margin-left:90px'></i><br>
+                      <p style='margin-left:90px'>Charging</p>
+                     </div>
+                     <div>
+                      <i class="fa-solid fa-battery-three-quarters fa-5x"style='margin-left:90px'></i>
+                      <p style='margin-left:90px'>Battery Status</p>
+                     </div>
+                    </div>
+                    
+                  
+                  </div>
+                  {% comment %} <a href="{% url 'logout' %}"class="btn btn-dark btn-sm">Logout</a>
+                  <a href="{% url 'changepass' %}"class="btn btn-primary btn-sm">Change Password</a> {% endcomment %}
+           </div>
+        </div>
+    </div>
+    <hr class='mt-4 border1'>
+</div>
+  
+{% endblock content %}

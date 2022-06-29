@@ -1,0 +1,27 @@
+{% load static %}
+<nav class="navbar navbar-light  bg-success">
+    <div class="container-fluid">
+     <a href="/"> <img src="{% static 'images/Yahhvi_logo-removebg.png' %} " alt=""class='img'></a>
+    {% if user.is_authenticated %}
+    <div class="dropdown">
+      <a class="btn btn-success dropdown-toggle" href="#" role="button" id="dropdownMenuLink" data-bs-toggle="dropdown" aria-expanded="false">
+        Welcome {{request.user}}
+      </a>
+      <ul class="dropdown-menu" aria-labelledby="dropdownMenuLink">
+        <li><a class="dropdown-item" href="/logout">Logout</a></li>
+        <li><a class="dropdown-item" href="/changepass">Change password</a></li>
+        <li><a class="dropdown-item" href="/profile">Profile</a></li>
+      </ul>
+      {% else %}
+      <div class="d-flex  ">
+      <li class="nav-item text-white">
+        <a class="nav-link" href="{% url 'login' %}" >Login</a>
+      </li>
+      <li class="nav-item text-white">
+        <a href="{% url 'register' %}"class='btn btn-success'>SignUp</a>
+      </li>
+    </div> 
+      {% endif %}
+    </div>
+  </nav>
+  <div>

@@ -1,0 +1,53 @@
+{% extends 'base.html' %}
+{% load static %}
+<style>
+  .er{
+    color:red;
+  }
+</style>
+{% block content %}
+<div class="container-fluid">
+    <hr class='mt-4  border1'>
+    <div class="row">
+        <div class="col-sm-6 ">
+            <div>
+                <img src="{% static 'images/Yahhvi logo.jpg' %} " alt=""class='img2'>
+                <h5 class='heading'>Electric Vehcile Charging System</h5>
+             </div>
+        </div>
+        <div class="col-sm-3  offset-2" style='border-style:groove;border-radius: 25px;'>
+           <div class='p-3'>
+            <form class=''method='POST'novalidate>
+              {% csrf_token %}
+              {% if form.non_field_errors %}
+                {% for error in form.non_field_errors %}
+               <p class='er'> {{error}}</p>
+                {% endfor %}
+              {% endif %}
+                <div class="mb-3 text-center text-success font-weight-bold ">
+                  <h4 classs=''><span class='border-bottom border-success'>Login</span></h4>
+                  </div>
+                  {% for fm in form %}
+                  <div class="mb-3">
+                    {{fm}}{{fm.errors|striptags}}
+                  </div>
+                  {% endfor %}
+                  <div class="mb-3 text-end">
+                    <a href="">Forget pasword</a>
+                  </div>
+                  
+                
+                <div class="mb-3">
+                    <input type="submit" class="form-control btn-outline-success"value='Login' style='background-color: #00D100;'> 
+                 </div>
+                 <div class="mb-3">
+                   <h6> Need an account <a href="{% url 'register' %}">Register here</a> </h6>
+                 </div>
+            </form>
+           </div>
+        </div>
+    </div>
+    <hr class='mt-4 border1'>
+</div>
+  
+{% endblock content %}

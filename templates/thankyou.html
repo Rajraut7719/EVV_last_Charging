@@ -1,0 +1,36 @@
+{% extends 'base.html' %}
+{% load static %}
+<style>
+  .er{
+    color:red;
+  }
+</style>
+{% block content %}
+<div class="container-fluid">
+    <hr class='mt-4  border1'>
+    <div class="row">
+        <div class="col-md-6  col-sm-6 ">
+            <div>
+                <img src="{% static 'images/Yahhvi logo.jpg' %} " alt=""class='img2'>
+                <h5 class='heading'>Electric Vehcile Charging System</h5>
+             </div>
+        </div>
+        {% if messages %}
+        {% for message in messages %}
+        <div class="col-sm-3  offset-2" style='border-style:groove;border-radius: 25px;'>
+         
+         
+           <div class='pt-3'>
+              <h2 class='text-success mt-5'style='margin-left:80px;'>  <strong>{{message}}</strong></h2>
+              <p class='text-center'>Your account has been created .</p>
+            <p class='text-center'>Click here to login</p>
+            <a href="/login"class='btn form-control btn-success p-2'style='background-color: #00D100;'>Login</a>
+           </div>
+        </div>
+        {% endfor %}
+        {% endif %}
+    </div>
+    <hr class='mt-4 border1'>
+</div>
+  
+{% endblock content %}
