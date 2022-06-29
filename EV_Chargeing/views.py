@@ -37,7 +37,6 @@ def user_login(request):
                 user=authenticate(username=username,password=password)
                 if user is not None:
                     login(request,user)
-                    messages.success(request, 'Logged in Successfully')
                     return HttpResponseRedirect('/profile/')
         else:
             fm=Login_Form()         
